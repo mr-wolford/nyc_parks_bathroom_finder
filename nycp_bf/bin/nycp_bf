@@ -1,3 +1,5 @@
 #!/usr/bin/env ruby
 
-puts 'Hey, you did it!'
+require_relative '../lib/environment.rb'
+
+NycpBf::CLI.new.call
