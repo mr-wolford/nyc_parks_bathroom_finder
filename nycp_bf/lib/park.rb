@@ -1,4 +1,4 @@
-class Parks
+class Park
     attr_accessor :name
 
     @@all = []
