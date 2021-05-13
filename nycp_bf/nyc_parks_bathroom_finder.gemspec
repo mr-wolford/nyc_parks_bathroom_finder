@@ -9,8 +9,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ["'Matt Wolford'"]
   spec.email         = ["'matthew.r.wolford@gmail.com'"]
 
-  spec.summary       = %q{TODO: Write a short summary, because RubyGems requires one.}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.summary       = %q{Find a NYC Park bathroom near you!}
+  spec.description   = %q{The NYC Parks Bathroom Finder will help you locate the nearest public  bathroom in the NYC Parks system. }
   spec.homepage      = "TODO: Put your gem's website or public repo URL here."
   spec.license       = "MIT"
 

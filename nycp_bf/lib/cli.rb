@@ -1,7 +1,4 @@
 
-module NycpBf
-end
-
 class NycpBf::CLI
     
     def call
