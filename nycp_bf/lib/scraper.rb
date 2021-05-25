@@ -1,0 +1,3 @@
+class NycpBf::Scraper
+
+end
