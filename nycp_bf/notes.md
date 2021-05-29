@@ -16,5 +16,3 @@ Classes
 - CLI
 - Scraper
 
-For next work:
-cli.rb can't seem to find the NycpBf module. Why?

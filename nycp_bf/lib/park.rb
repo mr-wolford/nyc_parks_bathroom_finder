@@ -1,11 +1,16 @@
 class NycpBf::Park
-    attr_accessor :name, :location, :borough
+    attr_reader :name
 
     @@all = []
 
     def initialize(name)
         @name = name
         save
+    end
+    
+    def self.all
+        NycpBf::Scraper.get_user_months(zip) if @@all.empty?
+        @@all
     end
 
     def save
