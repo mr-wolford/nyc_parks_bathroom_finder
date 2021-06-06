@@ -1,5 +1,5 @@
 class NycpBf::Bathroom
-    attr_reader :name, :location
+    attr_reader :name, :location, :park
 
     @@all = []
 

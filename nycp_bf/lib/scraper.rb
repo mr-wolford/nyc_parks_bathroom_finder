@@ -18,11 +18,15 @@ class NycpBf::Scraper
         #sends information to Bathroom.new
 
         doc = Nokogiri::HTML(open(park.url))
+        bathroom = doc.css("tbody tr")
+
+        bathroom.css("tr").each do |x|
+            name = x.css("td").children[0].text
+            location = x.css("td").children[1].text
+            NycpBf::Bathroom.new(name, location, park)
+        end
 
         binding.pry
-
-
-
 
     end
 

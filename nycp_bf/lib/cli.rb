@@ -1,5 +1,5 @@
-
 class NycpBf::CLI
+
     
     def call
         puts "\nWelcome to the NYC Parks Bathroom Finder!"
@@ -22,7 +22,14 @@ class NycpBf::CLI
     end
 
     def get_bathrooms
-      @bathroom = NycpBf::Bathroom.get_bathrooms
+        NycpBf::Bathroom.get_bathrooms
+        # @bathrooms = NycpBf::Bathroom.all.map do |x|
+        #     x.park.include?()
+        # end
     end
+
+    # def list_bathrooms
+
+    # end
 
 end

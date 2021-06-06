@@ -3,5 +3,3 @@
 require_relative '../lib/environment.rb'
 
 NycpBf::CLI.new.call
-
-
