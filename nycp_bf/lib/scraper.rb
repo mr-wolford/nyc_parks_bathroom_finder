@@ -26,8 +26,6 @@ class NycpBf::Scraper
             NycpBf::Bathroom.new(name, location, park)
         end
 
-        binding.pry
-
     end
 
 

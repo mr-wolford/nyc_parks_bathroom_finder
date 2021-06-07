@@ -1,11 +1,11 @@
 class NycpBf::Park
-    attr_reader :name, :url
-
+    attr_accessor :name, :url
     @@all = []
 
     def initialize(name, url)
         @name = name
         @url = url
+        @bathrooms = []
         save
     end
 
