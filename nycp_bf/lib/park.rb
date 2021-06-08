@@ -1,5 +1,6 @@
 class NycpBf::Park
-    attr_accessor :name, :url
+    attr_accessor :name, :url, :bathrooms
+
     @@all = []
 
     def initialize(name, url)

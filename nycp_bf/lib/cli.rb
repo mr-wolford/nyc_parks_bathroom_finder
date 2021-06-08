@@ -2,12 +2,11 @@ class NycpBf::CLI
 
     def call
         puts "\nWelcome to the NYC Parks Bathroom Finder!"
-        puts "\nEnter a NYC ZIP code to find a public park bathroom near you."
+        puts "\nEnter a NYC ZIP code to find a public park with bathroom access near you."
         get_parks
         list_parks
-        # get_user_park
-        # get_bathrooms
-        #list_bathrooms
+        get_bathrooms
+        list_bathrooms
     end
 
     def get_parks
@@ -18,26 +17,22 @@ class NycpBf::CLI
         @parks.each.with_index(1) do |park, index| 
             puts" #{index}. #{park.name}"
         end
-        puts "\nChoose a park to see additional information."
+        puts "\nChoose a park to see additional bathroom details"
     end
 
-    def get_user_park
-        user_park = gets.strip.to_i
-        show_bathrooms_for(user_park)
+    def get_bathrooms
+        NycpBf::Bathroom.get_bathrooms
+        @bathrooms = NycpBf::Bathroom.all
+        
+        #need to add something to the line above that selects from the Bathroom.all array to find those only with the Park object selected? this might actually be handled in Bathroom.get_bathrooms method - check it
+        
+
     end
 
-    def show_bathrooms_for(user_park)
-        park = @parks[user_park - 1]
+    def list_bathrooms
+        @bathrooms.each.with_index(1) do |bathroom, index|
+            puts " #{index}. #{bathroom.name} - #{bathroom.location}"
+        end
     end
-
-
-    # def get_bathrooms
-    #     NycpBf::Bathroom.get_bathrooms
-    #     # @bathrooms = NycpBf::Bathroom.all.map do |x|
-    #     #     x.park.include?()
-    #     # end
-    # end
-
-    # end
 
 end
